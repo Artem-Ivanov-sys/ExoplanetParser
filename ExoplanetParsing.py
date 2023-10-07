@@ -64,7 +64,7 @@ class ExoplanetParsing:
                     if len(planet_temperature)<2 \
                             or float(planet_temperature[:planet_temperature.index(" ")])<planet_parameters["max_temperature"]:
                         self.reserve_list[0] += 1
-                        self.out_list.append("|".join(map(str, [self.out_list[0], link.text, planet[1], planet[2], 
+                        self.reserve_list.append("|".join(map(str, [self.reserve_list[0], link.text, planet[1], planet[2], 
                                                                 planet[3], planet[4], planet[5], planet_temperature])))
                 
                 elif star_type[0].upper() in star_parameters["class"] \
